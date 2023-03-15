@@ -6,11 +6,12 @@
  * @version (a version number or a date)
  */
 import java.util.Random;
+import java.security.SecureRandom;
 public class Account
 {
     // instance variables - replace the example below with your own
     private int x;
-    private String user;
+    public String user;
     public float balance;
     private int accountnumber;
     /**
@@ -19,33 +20,34 @@ public class Account
     public Account()
     {
         // initialise instance variables
-        accountnumber = new Random().nextInt();
+        int accountnumber = new SecureRandom().nextInt();
+        //accountnumber = Math.abs(new Random().nextInt());
         this.balance = 0;
     }
     public Account(String user)
     {
         // initialise instance variables
-        accountnumber = new Random().nextInt();
+        accountnumber = Math.abs(new Random().nextInt());
         this.user = user;
         this.balance = 0;
     }
-    private void display()
+    public void display()
     {
-        System.out.println("\n user name: " + this.user + "\n account number: " + accountnumber + "\n balance: " + balance);
+        System.out.println("user name: " + this.user + "\n account number: " + accountnumber + "\n balance: " + balance);
     }
-    private void deposit(float m)
+    public void deposit(float m)
     {
         this.balance += m;
     }
-    private void withdraw(float m)
+    public void withdraw(float m)
     {
         this.balance -= m;
     }
-    private float getBalance()
+    public float getBalance()
     {
         return this.balance;
     }
-    private String getUserName()
+    public String getUserName()
     {
         return this.user;
     }
@@ -55,9 +57,5 @@ public class Account
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+
 }

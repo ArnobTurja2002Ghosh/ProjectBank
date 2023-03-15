@@ -16,21 +16,28 @@ public class Cheque extends Account
     /**
      * Constructor for objects of class Cheque
      */
-    private Cheque()
+    public Cheque()
     {
         super();
         // initialise instance variables
         x = 0;
     }
-    private Cheque(String user)
+    public Cheque(String user)
     {
         super(user);
     }
-    private void withdraw(float m)
+    
+    public void withdraw(float m)
     {
+        if(balance-m >= 0){
         balance -= m;
-        if((balance - m) < minimBalance){
+        if((balance) < minimBalance){
         overLimitFee += overLimitCharge;
+        System.out.println("The over-limit service fee for " + this.user + " is "+overLimitFee);
+        }
+        }
+        else{
+            System.out.println(this.user + " was not allowed to withdraw " + m);
         }
     }
     /**
@@ -39,9 +46,5 @@ public class Cheque extends Account
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+
 }
