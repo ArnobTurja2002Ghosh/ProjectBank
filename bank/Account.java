@@ -20,34 +20,33 @@ public class Account
     public Account()
     {
         // initialise instance variables
-        int accountnumber = new SecureRandom().nextInt();
-        //accountnumber = Math.abs(new Random().nextInt());
+        accountnumber = Math.abs(new SecureRandom().nextInt());
         this.balance = 0;
     }
     public Account(String user)
     {
         // initialise instance variables
-        accountnumber = Math.abs(new Random().nextInt());
+        accountnumber = Math.abs(new SecureRandom().nextInt());
         this.user = user;
         this.balance = 0;
     }
-    public void display()
+    void display()
     {
         System.out.println("user name: " + this.user + "\n account number: " + accountnumber + "\n balance: " + balance);
     }
-    public void deposit(float m)
+    void deposit(float m)
     {
         this.balance += m;
     }
-    public void withdraw(float m)
+    void withdraw(float m)
     {
         this.balance -= m;
     }
-    public float getBalance()
+    float getBalance()
     {
         return this.balance;
     }
-    public String getUserName()
+    String getUserName()
     {
         return this.user;
     }
