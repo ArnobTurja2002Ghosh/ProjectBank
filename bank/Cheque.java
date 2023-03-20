@@ -27,7 +27,7 @@ public class Cheque extends Account
         super(user);
     }
     
-    public void withdraw(float m)
+    void withdraw(float m)
     {
         if(balance-m >= 0){
         balance -= m;
