@@ -2,7 +2,7 @@
 /**
  * Write a description of class Account here.
  *
- * @author (your name)
+ * @author Arnob
  * @version (a version number or a date)
  */
 import java.util.Random;

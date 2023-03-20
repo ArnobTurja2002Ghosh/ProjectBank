@@ -2,7 +2,7 @@
 /**
  * Write a description of class Saving here.
  *
- * @author (your name)
+ * @author Arnob
  * @version (a version number or a date)
  */
 public class Saving extends Account

@@ -2,7 +2,7 @@
 /**
  * Write a description of class Cheque here.
  *
- * @author (your name)
+ * @author Arnob
  * @version (a version number or a date)
  */
 public class Cheque extends Account

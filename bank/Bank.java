@@ -2,7 +2,7 @@ import java.util.*;
 /**
  * Write a description of class Bank here.
  *
- * @author (your name)
+ * @author Arnob
  * @version (a version number or a date)
  */
 public class Bank

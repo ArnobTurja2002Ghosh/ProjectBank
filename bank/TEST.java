@@ -2,7 +2,7 @@
 /**
  * Write a description of class CIBC here.
  *
- * @author (your name)
+ * @author Arnob
  * @version (a version number or a date)
  */
 public class TEST
